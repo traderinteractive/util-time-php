@@ -6,11 +6,12 @@
 namespace DominionEnterprises\Util;
 
 use DominionEnterprises\Util\Time as T;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @coversDefaultClass \DominionEnterprises\Util\Time
  */
-final class TimeTest extends \PHPUnit_Framework_TestCase
+final class TimeTest extends TestCase
 {
     /**
      * @test
