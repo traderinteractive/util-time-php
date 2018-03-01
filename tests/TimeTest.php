@@ -1,11 +1,9 @@
 <?php
-/**
- * Defines the \DominionEnterprises\Util\TimeTest class
- */
 
 namespace DominionEnterprises\Util;
 
-use DominionEnterprises\Util\Time as T;
+use DominionEnterprises\Util\Time as TimeUtil;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -20,18 +18,7 @@ final class TimeTest extends TestCase
     public function getAnsiSqlTimestampBasic()
     {
         date_default_timezone_set('America/New_York');
-        $this->assertSame("(TIMESTAMP'2013-05-02 10:57:08')", T::getAnsiSqlTimestamp(1367506628));
-    }
-
-    /**
-     * @test
-     * @covers ::getAnsiSqlTimestamp
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage $unixTimestamp was not an int
-     */
-    public function getAnsiSqlTimestampNonInt()
-    {
-        T::getAnsiSqlTimestamp('1367506628');
+        $this->assertSame("(TIMESTAMP'2013-05-02 10:57:08')", TimeUtil::getAnsiSqlTimestamp(1367506628));
     }
 
     /**
@@ -41,7 +28,7 @@ final class TimeTest extends TestCase
     public function inMillis()
     {
         $beforeSeconds = time();
-        $milliseconds = T::inMillis();
+        $milliseconds = TimeUtil::inMillis();
         $afterSecondsPlus = time() + 1;
 
         $this->assertGreaterThanOrEqual($beforeSeconds * 1000, $milliseconds);
