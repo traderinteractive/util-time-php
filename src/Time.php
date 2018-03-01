@@ -1,6 +1,6 @@
 <?php
 
-namespace DominionEnterprises\Util;
+namespace TraderInteractive\Util;
 
 use InvalidArgumentException;
 

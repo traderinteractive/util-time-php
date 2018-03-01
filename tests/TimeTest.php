@@ -1,13 +1,12 @@
 <?php
 
-namespace DominionEnterprises\Util;
+namespace TraderInteractive\Util;
 
-use DominionEnterprises\Util\Time as TimeUtil;
-use InvalidArgumentException;
+use TraderInteractive\Util\Time as TimeUtil;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @coversDefaultClass \DominionEnterprises\Util\Time
+ * @coversDefaultClass \TraderInteractive\Util\Time
  */
 final class TimeTest extends TestCase
 {
