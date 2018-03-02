@@ -17,12 +17,8 @@ util-time-php requires PHP 5.4 (or later).
 To add the library as a local, per-project dependency use [Composer](http://getcomposer.org)! Simply add a dependency on
 `traderinteractive/util-time` to your project's `composer.json` file such as:
 
-```json
-{
-    "require": {
-        "traderinteractive/util-time": "~1.0"
-    }
-}
+```sh
+composer require traderinteractive/util-http
 ```
 ##Documentation
 Found in the [source](src) itself, take a look!
