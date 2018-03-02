@@ -2,8 +2,6 @@
 
 namespace TraderInteractive\Util;
 
-use InvalidArgumentException;
-
 /**
  * Static class for time based functions.
  */
@@ -15,8 +13,6 @@ final class Time
      * @param int $unixTimestamp
      *
      * @return string ansi sql timestamp surrounded with parenthesis
-     *
-     * @throws InvalidArgumentException if $unixTimestamp was not an int
      */
     public static function getAnsiSqlTimestamp(int $unixTimestamp) : string
     {
