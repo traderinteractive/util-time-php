@@ -1,9 +1,6 @@
 <?php
-/**
- * Defines \DominionEnterprises\Util\Time class.
- */
 
-namespace DominionEnterprises\Util;
+namespace TraderInteractive\Util;
 
 /**
  * Static class for time based functions.
@@ -16,15 +13,9 @@ final class Time
      * @param int $unixTimestamp
      *
      * @return string ansi sql timestamp surrounded with parenthesis
-     *
-     * @throws \InvalidArgumentException if $unixTimestamp was not an int
      */
-    public static function getAnsiSqlTimestamp($unixTimestamp)
+    public static function getAnsiSqlTimestamp(int $unixTimestamp) : string
     {
-        if (!is_int($unixTimestamp)) {
-            throw new \InvalidArgumentException('$unixTimestamp was not an int');
-        }
-
         return "(TIMESTAMP'" . date('Y-m-d H:i:s', $unixTimestamp) . "')";
     }
 
@@ -33,7 +24,7 @@ final class Time
      *
      * @return int the current unix time
      */
-    public static function inMillis()
+    public static function inMillis() : int
     {
         return (int)(microtime(true) * 1000);
     }
